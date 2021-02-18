@@ -74,11 +74,14 @@ body {
   width: 20%;
   text-align: left;
 }
+.logo {
+  width: 20%;
+  text-align: left;
+}
 .logo > img {
   height: 100%;
 }
 .navbar {
-  width: 60%;
   color: #025157;
   font-weight: 500;
 }
@@ -221,4 +224,53 @@ body {
 .features .feature-card .feature-image img {
     margin-top: 0;
     height: 240px;
+}
+
+@media (max-width: 425px) {
+  .navbar,
+  .actions {
+    display: none;
+  }
+  .logo {
+    display: revert;
+  }
+  .main .texto-principal {
+    font-size: 35px;
+  }
+  .main {
+    margin: 70px 0 0;
+  }
+  .main .banner > img {
+    width: 100%;
+  }
+  .main .borrar {
+    display: none;
+  }
+  .promo {
+    flex-direction: column;
+    width: 90%;
+  }
+  .promo .explanatory-video > video {
+    width: 100%;
+  }
+  .promo .publish > h3 {
+    font-size: 25px;
+    line-height: 1.2;
+  }
+  .promo .publish {
+    margin-top: 10px;
+  }
+  .promo .formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+  .features {
+    grid-template: repeat(4, 1fr) / 1fr;
+    padding: 5% 0;
+  }
+  .features .feature-image {
+    display: none;
+  }
 }
